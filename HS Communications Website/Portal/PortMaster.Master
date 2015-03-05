@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PortMaster.master.cs" Inherits="HS_Communications_Website.Portal.PortMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta charset="UTF-8">
+    <title>Letran Bataan</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../style/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../style/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../style/color/blue.css" media="all" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/css/prettyPhoto.css" />
+    <link rel="stylesheet" type="text/css" href="../style/type/museo.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../style/type/ptsans.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../style/type/charis.css" media="all" />
+    <link href="../../style/letran.css" rel="stylesheet" />
+    <!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="../style/css/ie7.css" media="all" />
+<![endif]-->
+    <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="../style/css/ie8.css" media="all" />
+<![endif]-->
+    <!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="../style/css/ie9.css" media="all" />
+<![endif]-->
+
+    <script type="text/javascript" src="../js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
+    <script type="text/javascript" src="../js/transify.js"></script>
+    <script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="../js/jquery.superbgimage.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.slickforms.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $('.forms').dcSlickForms();
+        });
+</script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+       <div id="thumbs">
+<a href="../style/images/art/bg1.jpg">1</a>
+<a href="../style/images/art/bg2.jpg">2</a>
+<a href="../style/images/art/bg3.jpg">3</a>
+<a href="../style/images/art/bg4.jpg">4</a>
+<a href="../style/images/art/bg5.jpg">5</a>
+<a href="../style/images/art/bg6.jpg">6</a>
+</div>
+<div id="superbgimage">
+	<div class="scanlines"></div>
+</div>
+
+ <div id="wrapper">
+        <div id="header">
+            <div class="logo"><a href="index.html">
+                <img src="../images/testlogot.png" alt="" width="50%"/></a></div>
+            <div class="social">
+                <ul>
+                    <li><a href="#">
+                        <img src="../style/images/icon-rss.png" alt="RSS" /></a></li>
+                    <li><a href="#">
+                        <img src="../style/images/icon-facebook.png" alt="Facebook" /></a></li>
+                    <li><a href="#">
+                        <img src="../style/images/icon-twitter.png" alt="Twitter" /></a></li>
+                    <li><a href="#">
+                        <img src="../style/images/icon-googleplus.png" alt="Google+" /></a></li>
+                    <li><a href="#">
+                        <img src="../style/images/icon-dribble.png" alt="Dribble" /></a></li>
+                    <li><a href="#">
+                        <img src="../style/images/icon-flickr.png" alt="Flickr" /></a></li>
+                    <li><a href="#">
+                        <img src="../style/images/icon-tumblr.png" alt="Tumblr" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- Begin Menu -->
+      <form id="form1" runat="server">
+        <div id="menu" class="menu opacity">
+            <ul>
+      <li><a href="Default.aspx">Announcement</a>
+          <ul>
+              <li><a href="#">Messages</a></li>
+              <li><a href="#">Letters</a></li>
+          </ul>
+      </li>
+      <li><a href="portfolio.html">Profile</a>
+      </li>
+      <li><a href="blog.html">Schedule</a></li>
+      <li><a href="ChangePassword.aspx">Change Password</a>
+       </li>
+    
+      <li><a href="contact.html">Contact Us</a></li>
+      <li>
+          <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>
+    
+    </ul>
+            <br style="clear: left" />
+        </div>
+        <!-- End Menu -->
+   
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    
+    
+  <div id="copyright" class="opacity">
+    <p>© 2014 Letran Bataan. All Right Reserved.</p>
+  </div>
+    </div>
+    
+      <script type="text/javascript" src="../js/scripts.js"></script>
+</body>
+</html>
