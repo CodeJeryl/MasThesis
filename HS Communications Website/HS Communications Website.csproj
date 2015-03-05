@@ -65,10 +65,13 @@
     <Content Include="App_Data\HSdB_log.ldf">
       <DependentUpon>HSdB.mdf</DependentUpon>
     </Content>
+    <Content Include="CoreValues.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Faculty\Fhomepage.aspx" />
     <Content Include="Faculty\Messages.aspx" />
+    <Content Include="History.aspx" />
     <Content Include="images\testlogot.png" />
+    <Content Include="InstitutionalStrategies.aspx" />
     <Content Include="js\carousel.js" />
     <Content Include="js\ddsmoothmenu.js" />
     <Content Include="js\bpop.js" />
@@ -81,8 +84,12 @@
     <Content Include="js\jquery.superbgimage.min.js" />
     <Content Include="js\scripts.js" />
     <Content Include="js\transify.js" />
+    <Content Include="Mission.aspx" />
+    <Content Include="Objectives.aspx" />
+    <Content Include="Philosophy.aspx" />
     <Content Include="Portal\ChangePassword.aspx" />
     <Content Include="Portal\Phomepage.aspx" />
+    <Content Include="Saints.aspx" />
     <Content Include="style\color\blue.css" />
     <Content Include="style\css\ie7.css" />
     <Content Include="style\css\ie8.css" />
@@ -231,6 +238,7 @@
     <Content Include="style\type\charis.css" />
     <Content Include="style\type\museo.css" />
     <Content Include="style\type\ptsans.css" />
+    <Content Include="Symbols.aspx" />
     <Content Include="templatesss\blog.html" />
     <Content Include="templatesss\button-boxes-images.html" />
     <Content Include="templatesss\columns.html" />
@@ -495,6 +503,13 @@
     <Compile Include="Admin\SendMessage.aspx.designer.cs">
       <DependentUpon>SendMessage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CoreValues.aspx.cs">
+      <DependentUpon>CoreValues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreValues.aspx.designer.cs">
+      <DependentUpon>CoreValues.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -523,12 +538,47 @@
     <Compile Include="Faculty\Messages.aspx.designer.cs">
       <DependentUpon>Messages.aspx</DependentUpon>
     </Compile>
+    <Compile Include="History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InstitutionalStrategies.aspx.cs">
+      <DependentUpon>InstitutionalStrategies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InstitutionalStrategies.aspx.designer.cs">
+      <DependentUpon>InstitutionalStrategies.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MainMaster.Master.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MainMaster.Master.designer.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mission.aspx.cs">
+      <DependentUpon>Mission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mission.aspx.designer.cs">
+      <DependentUpon>Mission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Objectives.aspx.cs">
+      <DependentUpon>Objectives.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Objectives.aspx.designer.cs">
+      <DependentUpon>Objectives.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Philosophy.aspx.cs">
+      <DependentUpon>Philosophy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Philosophy.aspx.designer.cs">
+      <DependentUpon>Philosophy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Portal\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
@@ -552,6 +602,20 @@
       <DependentUpon>PortMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Saints.aspx.cs">
+      <DependentUpon>Saints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Saints.aspx.designer.cs">
+      <DependentUpon>Saints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Symbols.aspx.cs">
+      <DependentUpon>Symbols.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Symbols.aspx.designer.cs">
+      <DependentUpon>Symbols.aspx</DependentUpon>
+    </Compile>
     <Compile Include="temp\samplepage.aspx.cs">
       <DependentUpon>samplepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
