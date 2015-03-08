@@ -94,10 +94,10 @@
       </li>
       <li><a href="blog.html">Manage Accounts</a>
            <ul>
-              <li><a href="#">Assign Subject Teacher</a></li>
-              <li><a href="#">Assign Adviser to Section</a></li>
-                <li><a href="#">Add Teachers</a></li>
-                <li><a href="#">Disable Accounts</a></li>
+              <li><a href="AssignT.aspx">Assign Subject Teacher</a></li>
+              <li><a href="AddTeachers.aspx">Assign Adviser to Section</a></li>
+                <li><a href="AddTeachers.aspx">Add Teachers</a></li>
+                <li><a href="#">Enable/Disable Accounts</a></li>
           </ul>
 
       </li>

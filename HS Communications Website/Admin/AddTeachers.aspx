@@ -20,11 +20,11 @@
      <div id="container" class="opacity">
  <div class="full-width">
                 <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
-                  Faculty Added Successfully!</h2></asp:Panel>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 
-
+     <div class="one-half">
            <h2>Add/Register Faculty</h2>
     <%-- <asp:UpdatePanel ID="UpdatePanel1" runat="server">
          <ContentTemplate>
@@ -49,7 +49,27 @@
                </asp:DropDownList>
                 &nbsp;&nbsp;&nbsp;&nbsp;
           <asp:CheckBox ID="CheckBox1" runat="server" /> Check this if Admin Account
-                <span style="margin: 80%"> <asp:Button ID="Button1" runat="server" Text="Add Faculty" CssClass="buttonn" OnClick="Button1_Click"/></span>
+                <span style="margin: 60%">
+               <asp:Button ID="Button1" runat="server" Text="Add Faculty" CssClass="buttonn" OnClick="Button1_Click"/>
+                </span>
+          </div>
+     
+     <div class="one-half last">
+           <h2>Assign Advisers to Section</h2> <br/>
+         <p>Section: <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno"></asp:DropDownList>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [Sectno], [GR-YR] AS column1 FROM [Section] ORDER BY [GR-YR]"></asp:SqlDataSource>
+           </p><br/>
+         <p>Adviser Name: 
+             <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource2" DataTextField="fullname" DataValueField="fCode">
+             </asp:DropDownList>
+             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [fCode], [fullname] FROM [FacTbl] ORDER BY [fullname]"></asp:SqlDataSource>
+           </p> <br/>
+         <span style="margin: 60%">
+               <asp:Button ID="AdviserBtn" runat="server" Text="Assign Adviser" CssClass="buttonn" OnClick="AdviserBtn_Click"/>
+                </span>
+     </div>
+          
+
                 <div class="clear"></div>
             </div>
            </div>
