@@ -16,6 +16,10 @@ namespace HS_Communications_Website.Portal
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
+            Session.Abandon();
+            Session.Clear();
+            System.Web.Security.FormsAuthentication.SignOut();
+
             Response.Redirect("~/Default.aspx");
         }
     }

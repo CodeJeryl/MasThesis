@@ -76,6 +76,7 @@
         </div>
         <div class="clear"></div>
         <!-- Begin Menu -->
+      <form id="form1" runat="server">
         <div id="menu" class="menu opacity">
             <ul>
          <li><a href="portfolio.html">Dashboard</a></li>
@@ -104,13 +105,13 @@
       <li><a href="fullwidth.html">Change Password</a>
        </li>
     
-      <li><a href="contact.html">Log Out</a></li>
+      <li> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>
     
     </ul>
             <br style="clear: left" />
         </div>
         <!-- End Menu -->
-    <form id="form1" runat="server">
+   
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

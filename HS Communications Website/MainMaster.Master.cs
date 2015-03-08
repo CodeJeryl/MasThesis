@@ -33,19 +33,23 @@ namespace HS_Communications_Website
                 conek.Open();
                 SqlCommand comsearch =
                     new SqlCommand(
-                        "Select * From facTbl where username = '" + usernameTxtbox.Text + "' and password = '" +
-                        passTxtbox.Text + "'", conek);
+                        "Select * From facTbl where empID = '" + usernameTxtbox.Text + "' and password = '" +
+                        passTxtbox.Text + "' and disabled = 'false'", conek);
                 SqlDataReader rd = comsearch.ExecuteReader();
                 if (rd.Read())
                 {
                     //  has = rd.GetString(2);
-                    string level = rd.GetString(3);
+                    Session["level"] = rd.GetString(3);
                     Session["name"] = rd.GetString(4);
-                    if (level == "Principal")
+                    Session["admin"] = rd.GetBoolean(5);
+                    Session["adviser"] = rd.GetBoolean(7);
+                    Session["advisory"] = rd.GetString(8);
+
+                    if (rd.GetBoolean(5))
                     {
-                        Session["Adviser"] = "1";
-                        Session["level"] = "Principal";
-                        Session["username"] = rd.GetString(2);
+                      //Admin Code Here
+
+                   
                         //conek1.Close();
                         //conek1.Open();
 
@@ -56,10 +60,11 @@ namespace HS_Communications_Website
                         System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
                         System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
 
-                        Response.Redirect("~/Faculty/Fhomepage.aspx", false);
+                        Response.Redirect("~/Admin/AdminHomepage.aspx", false);
                     }
-                    else if (level == "Adviser")
+                    else
                     {
+                        //not admin code here
 
                         //Session["customerID"] = rd.GetInt32(0);
                         //Session["email"] = rd.GetString(1);
@@ -72,21 +77,6 @@ namespace HS_Communications_Website
 
                         Response.Redirect("~/Faculty/Fhomepage.aspx", false);
                     }
-                    else if (level == "Teacher")
-                    {
-
-                        //Session["customerID"] = rd.GetInt32(0);
-                        //Session["email"] = rd.GetString(1);
-                        //Session["name"] = rd.GetString(3);
-                        //Session["address"] = rd.GetString(9);
-
-                        System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
-                        System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
-                        System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
-
-                        Response.Redirect("~/Faculty/Fhomepage.aspx", false);
-                    }
-
                 }
                 else
                 {
@@ -105,6 +95,8 @@ namespace HS_Communications_Website
                         char last = usernameTxtbox.Text[usernameTxtbox.Text.Length - 1];
                         if (last.ToString() == "P")
                         {
+                            //parent code here
+
                             Session["studno"] = rd1.GetInt32(0);
                             Session["name"] = rd1.GetString(1);
                             Session["username"] = rd1.GetString(2);
@@ -125,6 +117,8 @@ namespace HS_Communications_Website
                         }
                         else
                         {
+                            //student code here
+
                             Session["studno"] = rd1.GetInt32(0);
                             Session["name"] = rd1.GetString(1);
                             Session["username"] = rd1.GetString(2);
@@ -146,7 +140,7 @@ namespace HS_Communications_Website
                     }
                     else
                     {
-                        errorLbl.Text = "not yet activated or not exists";
+                        errorLbl.Text = "Account not yet activated or Do not exists";
                     }
                 }
 

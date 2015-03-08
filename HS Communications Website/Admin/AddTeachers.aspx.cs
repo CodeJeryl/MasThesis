@@ -79,6 +79,11 @@ namespace HS_Communications_Website.Admin
 
             con.Close();
 
+            con.Open();
+
+            SqlCommand update1 = new SqlCommand("Update FacTbl set Adviser = 'true', Advisory = '" + DropDownList2.SelectedValue + "' where fCode = '" + DropDownList3.SelectedValue + "'", con);
+            update1.ExecuteNonQuery();
+
             Label1.Text = "Adviser Successfully Assigned!";
             Panel1.Visible = true;
         }

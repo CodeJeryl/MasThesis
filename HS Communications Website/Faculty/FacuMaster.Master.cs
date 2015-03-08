@@ -13,5 +13,14 @@ namespace HS_Communications_Website.Faculty
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            System.Web.Security.FormsAuthentication.SignOut();
+
+            Response.Redirect("~/Default.aspx");
+        }
     }
 }
