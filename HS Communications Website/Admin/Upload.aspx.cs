@@ -64,13 +64,13 @@ namespace HS_Communications_Website.Admin
                             Byte[] bytes = br.ReadBytes((Int32) fs.Length);
 
 
-                            string strQuery = "insert into uploadedFiles values('" + TextBox1.Text +
-                                              "',@Name, @datee,@ContentType, @Data,'" + Session["fcode"] + "')";
+                            string strQuery = "insert into uploadedFiles values('" + DropDownList1.Text +"','" + TextBox1.Text +
+                                              "',@filename, @datee,@ContentType, @Data,'" + Session["fcode"] + "')";
 
                             SqlCommand cmd = new SqlCommand(strQuery, con);
 
                             cmd.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
-                            cmd.Parameters.Add("@Name", SqlDbType.VarChar).Value = filename;
+                            cmd.Parameters.Add("@filename", SqlDbType.VarChar).Value = filename;
                             cmd.Parameters.Add("@ContentType", SqlDbType.VarChar).Value = contenttype;
                             cmd.Parameters.Add("@Data", SqlDbType.Binary).Value = bytes;
 
