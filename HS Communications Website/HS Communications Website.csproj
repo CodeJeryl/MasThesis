@@ -64,6 +64,7 @@
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\ManageAccnt.aspx" />
     <Content Include="Admin\SendMessage.aspx" />
+    <Content Include="Admin\Upload.aspx" />
     <Content Include="App_Data\HSdB.mdf" />
     <Content Include="App_Data\HSdB_log.ldf">
       <DependentUpon>HSdB.mdf</DependentUpon>
@@ -527,6 +528,13 @@
     </Compile>
     <Compile Include="Admin\SendMessage.aspx.designer.cs">
       <DependentUpon>SendMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
     </Compile>
     <Compile Include="CoreValues.aspx.cs">
       <DependentUpon>CoreValues.aspx</DependentUpon>

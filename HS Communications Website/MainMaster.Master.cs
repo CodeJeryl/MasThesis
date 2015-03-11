@@ -39,6 +39,7 @@ namespace HS_Communications_Website
                 if (rd.Read())
                 {
                     //  has = rd.GetString(2);
+                    Session["fcode"] = rd.GetInt32(0);
                     Session["level"] = rd.GetString(3);
                     Session["name"] = rd.GetString(4);
                     Session["admin"] = rd.GetBoolean(5);
