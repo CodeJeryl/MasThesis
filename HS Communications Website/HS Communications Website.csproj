@@ -94,6 +94,7 @@
     <Content Include="Portal\ChangePassword.aspx" />
     <Content Include="Portal\Phomepage.aspx" />
     <Content Include="Portal\Profile.aspx" />
+    <Content Include="Portal\Schedule.aspx" />
     <Content Include="Saints.aspx" />
     <Content Include="style\color\blue.css" />
     <Content Include="style\css\ie7.css" />
@@ -640,6 +641,13 @@
     </Compile>
     <Compile Include="Portal\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Schedule.aspx.cs">
+      <DependentUpon>Schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Schedule.aspx.designer.cs">
+      <DependentUpon>Schedule.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Saints.aspx.cs">

@@ -80,16 +80,15 @@
         <div id="menu" class="menu opacity">
             <ul>
          <li><a href="portfolio.html">Dashboard</a></li>
-      <li><a href="Default.aspx">Uploading</a>
+      <li><a>Uploading</a>
           <ul>
-              <li><a href="#">Letters</a></li>
-              <li><a href="#">Class Schedule</a></li>
+              <li><a href="Upload.aspx">Memo/Class Schedule</a></li>
           </ul>
       </li>
-      <li><a href="portfolio.html">Messages</a>
+      <li><a>Messages</a>
           <ul>
               <li><a href="#">Inbox</a></li>
-              <li><a href="#">Send Message</a></li>
+              <li><a href="SendMessage.aspx">Send Message</a></li>
           </ul>
 
       </li>
@@ -98,11 +97,11 @@
               <li><a href="AssignT.aspx">Assign Subject Teacher</a></li>
               <li><a href="AddTeachers.aspx">Assign Adviser to Section</a></li>
                 <li><a href="AddTeachers.aspx">Add Teachers</a></li>
-                <li><a href="#">Enable/Disable Accounts</a></li>
+                <li><a href="ManageAccnt.aspx">Enable/Disable Accounts</a></li>
           </ul>
 
       </li>
-      <li><a href="fullwidth.html">Change Password</a>
+      <li><a>Change Password</a>
        </li>
     
       <li> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>

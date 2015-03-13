@@ -18,9 +18,10 @@ namespace HS_Communications_Website.Admin
 
         }
 
+        string conString = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var conString = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
+          
             SqlConnection con = new SqlConnection(conString);
 
             try
@@ -55,6 +56,9 @@ namespace HS_Communications_Website.Admin
                             case ".pdf":
                                 contenttype = "application/pdf";
                                 break;
+                            case ".jpg":
+                                contenttype = "image/jpeg";
+                                break;
                         }
 
                         if (contenttype != String.Empty)
@@ -65,7 +69,7 @@ namespace HS_Communications_Website.Admin
 
 
                             string strQuery = "insert into uploadedFiles values('" + DropDownList1.Text +"','" + TextBox1.Text +
-                                              "',@filename, @datee,@ContentType, @Data,'" + Session["fcode"] + "')";
+                                              "',@filename, @datee,@ContentType, @Data,'" + Session["name"] + "','"+DropDownList2.Text+"')";
 
                             SqlCommand cmd = new SqlCommand(strQuery, con);
 
@@ -82,14 +86,14 @@ namespace HS_Communications_Website.Admin
                             Label1.Text = "File Uploaded Successfully!";
 
                             //     SyllaUploadListview.DataBind();
-                            //      ListView1.DataBind();
+                                  ListView1.DataBind();
                             //    dataload();
                         }
 
                         else
                         {
                             ErrorPanel.Visible = true;
-                            ErrorLabel.Text = "File format not recognized. Upload Pdf/Word Documents only";
+                            ErrorLabel.Text = "File format not recognized. Upload Jpg/Jpeg/Pdf/Word Documents only";
 
                         }
 
@@ -101,6 +105,91 @@ namespace HS_Communications_Website.Admin
             {
                 ErrorPanel.Visible = true;
                 ErrorLabel.Text = ex.Message;
+            }
+        }
+
+        byte[] by;
+        string filename;
+        string content;
+        protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conString);
+
+            try
+            {
+                HiddenField hid = (HiddenField)(e.Item.FindControl("HiddenField1"));
+
+                if (e.CommandName == "down")
+                {
+                    con.Close();
+                    con.Open();
+
+                    SqlCommand qw = new SqlCommand("select * from uploadedFiles where ID = '" + hid.Value + "'", con);
+                    SqlDataReader dd = qw.ExecuteReader();
+
+                    while (dd.Read())
+                    {
+                        filename = dd.GetString(3);
+                        content = dd.GetString(5);
+                        by = (Byte[])dd["data"];
+                    }
+
+                    con.Close();
+
+                    Response.Buffer = true;
+
+                    Response.Charset = "";
+
+                    Response.Cache.SetCacheability(HttpCacheability.NoCache);
+
+                    Response.ContentType = content;
+
+                    Response.AddHeader("content-disposition", "attachment;filename=" + filename);
+
+                    Response.BinaryWrite(by);
+
+                    Response.Flush();
+
+                    Response.End();
+                }
+
+                if (e.CommandName == "del")
+                {
+                    con.Close();
+                    con.Open();
+
+                    SqlCommand qw = new SqlCommand("delete from uploadedFiles where ID = '" + hid.Value + "'", con);
+                    qw.ExecuteNonQuery();
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "File successfully Deleted!";
+                 //   SyllaUploadListview.DataBind();
+                    ListView1.DataBind();
+                  //  dataload();
+
+                }
+            }
+            catch (Exception er)
+            {
+                ErrorPanel.Visible = true;
+                ErrorLabel.Text = er.Message;
+                //   throw;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DropDownList1.SelectedItem.Text == "Class Schedule")
+            {
+                Panel2.Visible = true;
+            }
+            else
+            {
+                Panel2.Visible = false;
             }
         }
     }
