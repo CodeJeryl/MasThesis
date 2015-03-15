@@ -24,11 +24,7 @@ namespace HS_Communications_Website.Portal
             {
 
 
-                var constr =
-                    System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
-
-                SqlConnection con = new SqlConnection(constr);
-
+           
                 if (e.CommandName == "readd")
                 {
 

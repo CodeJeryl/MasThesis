@@ -49,6 +49,7 @@ namespace HS_Communications_Website
                     Session["admin"] = rd.GetBoolean(5);
                     Session["adviser"] = rd.GetBoolean(7);
                     Session["advisory"] = rd.GetString(8);
+                    Session["section"] = "faculty";
 
                     if (rd.GetBoolean(5))
                     {

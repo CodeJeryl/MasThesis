@@ -80,16 +80,15 @@
      <form id="form1" runat="server">
         <div id="menu" class="menu opacity">
             <ul>
-      <li><a href="Default.aspx">Announcement</a>
+      <li><a href="Fhomepage.aspx">Announcement</a>
           <ul>
-              <li><a href="#">Messages</a></li>
+              <li><a href="Fhomepage.aspx">Messages</a></li>
               <li><a href="#">Letters</a></li>
           </ul>
       </li>
-      <li><a href="portfolio.html">Profile</a>
+     <li><a href="Grades.aspx">Grades</a>
       </li>
-      <li><a href="blog.html">Schedule</a></li>
-      <li><a href="fullwidth.html">Change Password</a>
+     <li><a href="fullwidth.html">Change Password</a>
        </li>
     
       <li><a href="contact.html">Contact Us</a></li>

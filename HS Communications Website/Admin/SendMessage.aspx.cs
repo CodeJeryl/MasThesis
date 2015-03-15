@@ -77,7 +77,7 @@ namespace HS_Communications_Website.Admin
                 con.Open();
 
                 //insert all parent/student
-                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','" + DropDownList2.Text + "','false')", con);
+                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','" + DropDownList2.Text + "','false','" + DateTime.Now.ToShortDateString() + "')", con);
                 ins.ExecuteNonQuery();
 
                 con.Close();
@@ -95,7 +95,7 @@ namespace HS_Communications_Website.Admin
                 con.Open();
 
                 //insert all parent/student
-                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','faculty','false')", con);
+                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','faculty','false','" + DateTime.Now.ToShortDateString() + "')", con);
                 ins.ExecuteNonQuery();
 
                 con.Close();

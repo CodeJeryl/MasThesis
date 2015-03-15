@@ -63,6 +63,7 @@
     <Content Include="Admin\AssignT.aspx" />
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\ManageAccnt.aspx" />
+    <Content Include="Admin\ManageGrades.aspx" />
     <Content Include="Admin\SendMessage.aspx" />
     <Content Include="Admin\Upload.aspx" />
     <Content Include="App_Data\HSdB.mdf" />
@@ -71,8 +72,10 @@
     </Content>
     <Content Include="CoreValues.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Faculty\AddGrades.aspx" />
     <Content Include="Faculty\Fhomepage.aspx" />
-    <Content Include="Faculty\Messages.aspx" />
+    <Content Include="Faculty\Grades.aspx" />
+    <Content Include="Faculty\Message.aspx" />
     <Content Include="History.aspx" />
     <Content Include="images\notavail.png" />
     <Content Include="images\testlogot.png" />
@@ -93,6 +96,7 @@
     <Content Include="Objectives.aspx" />
     <Content Include="Philosophy.aspx" />
     <Content Include="Portal\ChangePassword.aspx" />
+    <Content Include="Portal\GradesViewer.aspx" />
     <Content Include="Portal\Message.aspx" />
     <Content Include="Portal\Phomepage.aspx" />
     <Content Include="Portal\Profile.aspx" />
@@ -525,6 +529,13 @@
     <Compile Include="Admin\ManageAccnt.aspx.designer.cs">
       <DependentUpon>ManageAccnt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ManageGrades.aspx.cs">
+      <DependentUpon>ManageGrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageGrades.aspx.designer.cs">
+      <DependentUpon>ManageGrades.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\SendMessage.aspx.cs">
       <DependentUpon>SendMessage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -553,6 +564,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Faculty\AddGrades.aspx.cs">
+      <DependentUpon>AddGrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\AddGrades.aspx.designer.cs">
+      <DependentUpon>AddGrades.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Faculty\FacuMaster.Master.cs">
       <DependentUpon>FacuMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -567,12 +585,19 @@
     <Compile Include="Faculty\Fhomepage.aspx.designer.cs">
       <DependentUpon>Fhomepage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Faculty\Messages.aspx.cs">
-      <DependentUpon>Messages.aspx</DependentUpon>
+    <Compile Include="Faculty\Grades.aspx.cs">
+      <DependentUpon>Grades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Faculty\Messages.aspx.designer.cs">
-      <DependentUpon>Messages.aspx</DependentUpon>
+    <Compile Include="Faculty\Grades.aspx.designer.cs">
+      <DependentUpon>Grades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
     </Compile>
     <Compile Include="History.aspx.cs">
       <DependentUpon>History.aspx</DependentUpon>
@@ -622,6 +647,13 @@
     </Compile>
     <Compile Include="Portal\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\GradesViewer.aspx.cs">
+      <DependentUpon>GradesViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\GradesViewer.aspx.designer.cs">
+      <DependentUpon>GradesViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Portal\Message.aspx.cs">
       <DependentUpon>Message.aspx</DependentUpon>
