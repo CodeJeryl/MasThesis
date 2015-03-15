@@ -14,6 +14,9 @@ namespace HS_Communications_Website.Portal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        //    Session["section"] = "GREGOR MENDEL";
+           SchedLbl.Text = Session["section"].ToString();
+
             var constring =
                   System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
             string conss = constring.ConnectionString;
@@ -34,6 +37,10 @@ namespace HS_Communications_Website.Portal
 
             dp.Fill(ds, "MyImages");
 
+            if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+
+
             DataRow myRow;
             myRow = ds.Tables["MyImages"].Rows[0];
             MyData = (byte[])myRow["data"];
@@ -44,7 +51,11 @@ namespace HS_Communications_Website.Portal
             // var img = "data:image/png;base64," + Convert.ToBase64String(stream.ToArray(), 0, stream.ToArray().Length);
             Image1.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(stream.ToArray(), 0, stream.ToArray().Length);
             //   pictureBox2.Image = Image.FromStream(stream);
-
+            }
+            else
+            {
+                Image1.ImageUrl = "~/images/notavail.png";
+            }
         }
     }
 }

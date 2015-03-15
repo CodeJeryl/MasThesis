@@ -74,6 +74,7 @@
     <Content Include="Faculty\Fhomepage.aspx" />
     <Content Include="Faculty\Messages.aspx" />
     <Content Include="History.aspx" />
+    <Content Include="images\notavail.png" />
     <Content Include="images\testlogot.png" />
     <Content Include="InstitutionalStrategies.aspx" />
     <Content Include="js\carousel.js" />
@@ -92,6 +93,7 @@
     <Content Include="Objectives.aspx" />
     <Content Include="Philosophy.aspx" />
     <Content Include="Portal\ChangePassword.aspx" />
+    <Content Include="Portal\Message.aspx" />
     <Content Include="Portal\Phomepage.aspx" />
     <Content Include="Portal\Profile.aspx" />
     <Content Include="Portal\Schedule.aspx" />
@@ -620,6 +622,13 @@
     </Compile>
     <Compile Include="Portal\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
     </Compile>
     <Compile Include="Portal\Phomepage.aspx.cs">
       <DependentUpon>Phomepage.aspx</DependentUpon>

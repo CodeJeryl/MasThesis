@@ -67,6 +67,15 @@ namespace HS_Communications_Website.Portal {
         protected global::System.Web.UI.WebControls.TextBox midnametxtbox;
         
         /// <summary>
+        /// addressTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox addressTxtbox;
+        
+        /// <summary>
         /// lastattendTxtbox control.
         /// </summary>
         /// <remarks>
@@ -85,13 +94,13 @@ namespace HS_Communications_Website.Portal {
         protected global::System.Web.UI.WebControls.TextBox schoolAddTxtbox;
         
         /// <summary>
-        /// TextBox1 control.
+        /// dob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox dob;
         
         /// <summary>
         /// placeBtxtbox control.
@@ -128,6 +137,15 @@ namespace HS_Communications_Website.Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox emailAddTxtbox;
+        
+        /// <summary>
+        /// studentBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button studentBtn;
         
         /// <summary>
         /// parentsPanel control.
@@ -229,12 +247,12 @@ namespace HS_Communications_Website.Portal {
         protected global::System.Web.UI.WebControls.TextBox FaddressTxtbox;
         
         /// <summary>
-        /// Button1 control.
+        /// parentBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button parentBtn;
     }
 }

@@ -14,10 +14,10 @@ namespace HS_Communications_Website.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             DropDownList2.Visible = false;
-            //https://www.nitroflare.com/view/7AAF25C42A95629/Fifty.Shades.of.Grey.1080pcoaster.avi
+            seclbl.Visible = false;
             //test sessions
-            Session["level"] = "Principal";
-            Session["name"] = "Jeryl Pogi";
+            //   Session["level"] = "Principal";
+            //   Session["name"] = "Jeryl Pogi";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace HS_Communications_Website.Admin
                 con.Open();
 
                 //insert all parent/student
-                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"] + "','true','all','false'),('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','all','false'),('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','faculty','false')", con);
+                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"] + "','true','all','false','" + DateTime.Now.ToShortDateString() + "'),('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','all','false','" + DateTime.Now.ToShortDateString() + "'),('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','faculty','false','" + DateTime.Now.ToShortDateString() + "')", con);
                 ins.ExecuteNonQuery();
 
                 con.Close();
@@ -59,7 +59,7 @@ namespace HS_Communications_Website.Admin
                 con.Open();
 
                 //insert all parent/student
-                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','"+DropDownList2.Text+"','false')", con);
+                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','"+DropDownList2.Text+"','false','"+DateTime.Now.ToShortDateString()+"')", con);
                 ins.ExecuteNonQuery();
 
                 con.Close();
@@ -122,22 +122,27 @@ namespace HS_Communications_Website.Admin
             if(DropDownList1.Text == "all")
             {
                 DropDownList2.Visible = false;
+                seclbl.Visible = false;
             }
             else if(DropDownList1.Text == "students")
             {
                 DropDownList2.Visible = true;
+                seclbl.Visible = true;
             }
             else if(DropDownList1.Text == "parents")
             {
                 DropDownList2.Visible = true;
+                seclbl.Visible = true;
             }
             else if (DropDownList1.Text == "faculty")
             {
                 DropDownList2.Visible = false;
+                seclbl.Visible = false;
             }
             else
             {
                 DropDownList2.Visible = true;
+                seclbl.Visible = true;
             }
         }
     }

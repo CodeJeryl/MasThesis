@@ -35,7 +35,7 @@ namespace HS_Communications_Website.Admin
                 //insert all parent/student
                 SqlCommand ins =
                     new SqlCommand(
-                        "Insert into FacTbl values('" + Convert.ToInt32(empIDtxtbox.Text) + "','" + passwordTxtbox.Text +
+                        "Insert into FacTbl values('" + empIDtxtbox.Text + "','" + passwordTxtbox.Text +
                         "','" + DropDownList1.Text + "','" + nameTxtbox.Text + "','" + CheckBox1.Checked + "')", con);
                 ins.ExecuteNonQuery();
 
@@ -65,8 +65,7 @@ namespace HS_Communications_Website.Admin
             ErrorPanel.Visible = false;
             var strcon = ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
             string conString = strcon.ConnectionString;
-
-
+            
             SqlConnection con = new SqlConnection(conString);
 
             con.Close();

@@ -28,6 +28,7 @@ namespace HS_Communications_Website
             SqlConnection con = new SqlConnection(conss);
             SqlConnection con1 = new SqlConnection(conss);
             SqlConnection conP = new SqlConnection(conss);
+            SqlConnection conPins = new SqlConnection(conss);
 
             con.Close();
             con.Open();
@@ -53,6 +54,13 @@ namespace HS_Communications_Website
               
                 SqlCommand upd = new SqlCommand("update students set activated = '1' where StudentNo = '"+userTxtbox.Text+"'", conP);
                 upd.ExecuteNonQuery();
+                conP.Close();
+
+                conPins.Close();
+                conPins.Open();
+                SqlCommand ins2 = new SqlCommand("Insert into pDetailsTbl values('" + userTxtbox.Text + "')", conPins);
+                ins2.ExecuteNonQuery();
+                conPins.Close();
 
                 Panel1.Visible = true;
              //   SucLbl.Text = "Student Account and Parent Account is Successfully Activated";

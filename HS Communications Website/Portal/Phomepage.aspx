@@ -9,22 +9,14 @@
               <%--  <div class="one-third">
                     <img src="../style/images/art/about.jpg" alt="" /></div>
                 <div class="two-third last">--%>
-                    <h2>Inbox</h2>
-                
-              <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
-                  <AlternatingItemTemplate>
-                      <tr style="background-color: #FAFAD2;color: #284775;">
-                          <td>
-                              <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
-                          </td>
-                          <td>
-                              <asp:Label ID="senderLabel" runat="server" Text='<%# Eval("sender") %>' />
-                          </td>
-                          <td>
-                              <asp:Label ID="userlvlLabel" runat="server" Text='<%# Eval("userlvl") %>' />
-                          </td>
-                      </tr>
-                  </AlternatingItemTemplate>
+                    <h2>Inbox
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                </h2>
+                 <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
+                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+
+              <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
+                  
                   <EditItemTemplate>
                       <tr style="background-color: #FFCC66;color: #000080;">
                           <td>
@@ -68,6 +60,7 @@
                   </InsertItemTemplate>
                   <ItemTemplate>
                       <tr style="background-color: #FFFBD6;color: #333333;">
+                          <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# Eval("MsgId") %>' />
                           <td>
                               <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
                           </td>
@@ -76,6 +69,9 @@
                           </td>
                           <td>
                               <asp:Label ID="userlvlLabel" runat="server" Text='<%# Eval("userlvl") %>' />
+                          </td>
+                           <td>
+                               <asp:Button ID="Button1" runat="server" Text="Read Now" CssClass="buttonn" CommandName="readd"/>
                           </td>
                       </tr>
                   </ItemTemplate>
@@ -88,6 +84,7 @@
                                           <th runat="server">title</th>
                                           <th runat="server">sender</th>
                                           <th runat="server">userlvl</th>
+                                          <th id="Th1" runat="server">Option</th>
                                       </tr>
                                       <tr id="itemPlaceholder" runat="server">
                                       </tr>
@@ -120,7 +117,7 @@
                   </SelectedItemTemplate>
                 </asp:ListView>
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [title], [sender], [userlvl] FROM [msgTbl] WHERE [parent] = @parent AND [section] IN (@section,'all')">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [MsgId],[title], [sender], [userlvl] FROM [msgTbl] WHERE [parent] = @parent AND [section] IN (@section,'all')">
                     <SelectParameters>
                         <asp:SessionParameter DefaultValue="false" Name="parent" SessionField="parent" Type="Boolean" />
                         <asp:SessionParameter DefaultValue="all" Name="section" SessionField="section" Type="String" />

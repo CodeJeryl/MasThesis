@@ -12,22 +12,25 @@
 
                  <h2>Student Information</h2>
                 <div class="one-third">
-                    <p>Last Name:  <asp:TextBox ID="lastnameTxtbox" runat="server"></asp:TextBox> </p> 
+                    <p>Last Name:  <asp:TextBox ID="lastnameTxtbox" runat="server" Enabled="False"></asp:TextBox> </p> 
                     </div>
                 <div class="one-third">
                    
-                  <p>First Name:  <asp:TextBox ID="firstnameTxtbox" runat="server"></asp:TextBox></p>
+                  <p>First Name:  <asp:TextBox ID="firstnameTxtbox" runat="server" Enabled="False"></asp:TextBox></p>
                   </div>
                 <div class="one-third last">
-                      <p>Middle Name:  <asp:TextBox ID="midnametxtbox" runat="server" ></asp:TextBox></p>
+                      <p>Middle Name:  <asp:TextBox ID="midnametxtbox" runat="server" Enabled="False" ></asp:TextBox></p>
                  </div>
+                
+              <p>  Address: <asp:TextBox ID="addressTxtbox" runat="server"></asp:TextBox></p>
+
           
                       <p>School Last Attended:  <asp:TextBox ID="lastattendTxtbox" runat="server" ></asp:TextBox></p>
                        
                  <p>School Address:  <asp:TextBox ID="schoolAddTxtbox" runat="server" ></asp:TextBox></p>
                 
                  <div class="one-third">
-                    <p>Date of Birth: (MM/DD/YYYY) <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> </p> 
+                    <p>Date of Birth: (MM/DD/YYYY) <asp:TextBox ID="dob" runat="server"></asp:TextBox> </p> 
                     </div>
                 <div class="one-third">
                    
@@ -35,16 +38,20 @@
                   </div>
                 <div class="one-third last">
                       <p>Gender: <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
-                        <asp:ListItem>Male</asp:ListItem>
-                        <asp:ListItem>Female</asp:ListItem>
+                        <asp:ListItem>M</asp:ListItem>
+                        <asp:ListItem>F</asp:ListItem>
                       </asp:RadioButtonList></p>
                  </div>
                 
                 <div class="one-half"><p> Mobile No. : <asp:TextBox ID="mobileTxtbox" runat="server"></asp:TextBox></p></div>
                 
-                     <div class="one-half last"><p> Email Address : <asp:TextBox ID="emailAddTxtbox" runat="server"></asp:TextBox></p></div>
+                     <div class="one-half last"><p> Email Address : <asp:TextBox ID="emailAddTxtbox" runat="server"></asp:TextBox></p>
+
+                     </div>
+                <br/>
+                   <span style="margin: 80%"> <asp:Button ID="studentBtn" runat="server" Text="Update Profile" CssClass="buttonn" OnClick="studentBtn_Click" Visible="False"/></span><br/>
                 
-                <asp:Panel ID="parentsPanel" runat="server">
+                <asp:Panel ID="parentsPanel" runat="server" Enabled="False">
                      <h2>Parent/Guardian Information</h2>
                      <div class="one-third">
                     <p>Mothers's Name:  <asp:TextBox ID="MnameTxtbox" runat="server"></asp:TextBox> </p> 
@@ -86,11 +93,12 @@
                        <p>Address:  <asp:TextBox ID="FaddressTxtbox" runat="server" TextMode="MultiLine" ></asp:TextBox></p>
 
                     </div>
+                       <span style="margin: 80%"> <asp:Button ID="parentBtn" runat="server" Text="Update Profile" CssClass="buttonn" OnClick="parentBtn_Click" Visible="False"/></span>
                 </asp:Panel>
                 
                 
 
-                <span style="margin: 80%"> <asp:Button ID="Button1" runat="server" Text="Update Profile" CssClass="buttonn" OnClick="Button1_Click"/></span>
+             
                 <div class="clear"></div>
             </div>
             <!-- End Full Width -->

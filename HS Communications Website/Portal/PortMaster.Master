@@ -79,15 +79,15 @@
       <form id="form1" runat="server">
         <div id="menu" class="menu opacity">
             <ul>
-      <li><a href="Default.aspx">Announcement</a>
+      <li><a href="Phomepage.aspx">Announcement</a>
           <ul>
-              <li><a href="#">Messages</a></li>
+              <li><a href="Phomepage.aspx">Messages</a></li>
               <li><a href="#">Letters</a></li>
           </ul>
       </li>
-      <li><a href="portfolio.html">Profile</a>
+      <li><a href="Profile.aspx">Profile</a>
       </li>
-      <li><a href="blog.html">Schedule</a></li>
+      <li><a href="Schedule.aspx">Schedule</a></li>
       <li><a href="ChangePassword.aspx">Change Password</a>
        </li>
     

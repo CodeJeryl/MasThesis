@@ -31,11 +31,15 @@ namespace HS_Communications_Website
             {
                 conek.Close();
                 conek.Open();
+                
+                
                 SqlCommand comsearch =
                     new SqlCommand(
                         "Select * From facTbl where empID = '" + usernameTxtbox.Text + "' and password = '" +
                         passTxtbox.Text + "' and disabled = 'false'", conek);
+              
                 SqlDataReader rd = comsearch.ExecuteReader();
+                
                 if (rd.Read())
                 {
                     //  has = rd.GetString(2);
@@ -94,7 +98,7 @@ namespace HS_Communications_Website
                     if (rd1.Read())
                     {
                         char last = usernameTxtbox.Text[usernameTxtbox.Text.Length - 1];
-                        if (last.ToString() == "P")
+                        if (last.ToString().ToUpper() == "P")
                         {
                             //parent code here
 
@@ -103,7 +107,7 @@ namespace HS_Communications_Website
                             Session["username"] = rd1.GetString(2);
                             Session["section"] = rd1.GetString(4);
                             Session["year"] = rd1.GetInt32(5);
-                            Session["Parent"] = "true";
+                            Session["parent"] = "true";
 
                             //conek1.Close();
                             //conek1.Open();
@@ -141,7 +145,7 @@ namespace HS_Communications_Website
                     }
                     else
                     {
-                        errorLbl.Text = "Account not yet activated or Do not exists";
+                        errorLbl.Text = "Incorrect Username/Password or Account not yet activated";
                     }
                 }
 

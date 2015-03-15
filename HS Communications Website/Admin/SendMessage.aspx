@@ -19,7 +19,7 @@
                <asp:ListItem Value="students">STUDENTS</asp:ListItem>
                <asp:ListItem Value="parents">PARENTS</asp:ListItem>
                <asp:ListItem Value="faculty">FACULTY</asp:ListItem>
-               </asp:DropDownList> &nbsp;&nbsp;&nbsp; Section: <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno"></asp:DropDownList>
+               </asp:DropDownList> &nbsp;&nbsp;&nbsp; <asp:Label ID="seclbl" runat="server" Text="Section: "></asp:Label> <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno"></asp:DropDownList>
                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [Sectno] FROM [Section] ORDER BY [Sectno]"></asp:SqlDataSource>
                 </p> </ContentTemplate>
      </asp:UpdatePanel>

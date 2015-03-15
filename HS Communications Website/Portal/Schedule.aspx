@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="container" class="opacity">
             <div class="full-width">
-           
+           <h2>Class Schedule: <asp:Label ID="SchedLbl" runat="server" Text="Label"></asp:Label></h2>
                    
  <asp:Image ID="Image1" runat="server" Height="607px" Width="900px" /> <br/>
     <span style="margin-left: 80%">
