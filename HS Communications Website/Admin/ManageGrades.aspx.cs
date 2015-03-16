@@ -59,5 +59,36 @@ namespace HS_Communications_Website.Admin
                 ErrorLabel.Text = ee.Message;
             }
         }
+
+        protected void ListView2_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            
+            try
+            {
+
+
+                if (e.CommandName == "open")
+                {
+                    Label sectno = (Label)(e.Item.FindControl("SectnoLabel"));
+                    Label subcode = (Label)(e.Item.FindControl("SubcodeLabel"));
+                    Label teachername = (Label)(e.Item.FindControl("fullnameLbl"));
+
+                    Session["sectno"] = sectno.Text;
+                    Session["subcode"] = subcode.Text;
+                    Session["teachername"] = teachername.Text;
+
+                    Response.Redirect("AddGrades.aspx");
+                  }
+
+
+            }
+            catch (Exception ee)
+            {
+                ErrorPanel.Visible = true;
+                ErrorLabel.Text = ee.Message;
+            }
+
+
+        }
     }
 }

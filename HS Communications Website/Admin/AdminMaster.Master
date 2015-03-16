@@ -92,6 +92,8 @@
           </ul>
 
       </li>
+                 <li><a href="ManageGrades.aspx">Grades</a>
+       </li>
       <li><a href="blog.html">Manage Accounts</a>
            <ul>
               <li><a href="AssignT.aspx">Assign Subject Teacher</a></li>

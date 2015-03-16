@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ActivateAccount.aspx" />
+    <Content Include="Admin\AddGrades.aspx" />
     <Content Include="Admin\AddTeachers.aspx" />
     <Content Include="Admin\AdminHomepage.aspx" />
     <Content Include="Admin\AssignT.aspx" />
@@ -486,6 +487,13 @@
     </Compile>
     <Compile Include="ActivateAccount.aspx.designer.cs">
       <DependentUpon>ActivateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddGrades.aspx.cs">
+      <DependentUpon>AddGrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddGrades.aspx.designer.cs">
+      <DependentUpon>AddGrades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AddTeachers.aspx.cs">
       <DependentUpon>AddTeachers.aspx</DependentUpon>
