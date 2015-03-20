@@ -19,8 +19,8 @@ namespace HS_Communications_Website.Admin
             if(!IsPostBack)
             {
                 GetChartData();
-            getChartTypes();
-               
+                GetChartDataSc();
+
             }
 
           
@@ -28,20 +28,7 @@ namespace HS_Communications_Website.Admin
 
         }
 
-        private  void getChartTypes()
-        {
-            foreach (int chartType in Enum.GetValues(typeof(SeriesChartType)))
-            {
-                ListItem li = new ListItem(Enum.GetName(typeof(SeriesChartType), chartType),chartType.ToString());
-                DropDownList1.Items.Add(li);
-            }
-        }
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Chart1.Series["Series1"].ChartType = (SeriesChartType)Enum.Parse(typeof (SeriesChartType), DropDownList1.SelectedValue);
-        }
-
+    
         private void GetChartData()
         {
             var constring =
@@ -58,9 +45,27 @@ namespace HS_Communications_Website.Admin
             while (red.Read())
             {
                 series.Points.AddXY(red["town"].ToString(), red["Number"]);
+
             }
+        }
+        private void GetChartDataSc()
+        {
+            var constring =
+                System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
+            string conss = constring.ConnectionString;
 
 
+            con = new SqlConnection(conss);
+            SqlCommand cmd = new SqlCommand("Select * from CountOldSc", con);
+            con.Open();
+            Series series = Chart2.Series["Series1"];
+            SqlDataReader red = cmd.ExecuteReader();
+
+            while (red.Read())
+            {
+                series.Points.AddXY(red["oldschool"].ToString(), red["Number"]);
+
+            }
         }
     }
 }

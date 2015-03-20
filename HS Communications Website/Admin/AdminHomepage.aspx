@@ -10,10 +10,11 @@
            
                     <h2>Dashboard</h2>
                 
-                Chart Type: <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+                <div class="one-half">
+           <h1 style="color: black"> Town Feeder</h1>
                 <asp:Chart ID="Chart1" runat="server">
                     <Series>
-                        <asp:Series Name="Series1" ChartArea="ChartArea1"  ChartType="Pie" ></asp:Series>
+                        <asp:Series Name="Series1" ChartArea="ChartArea1"  ChartType="Bar" ></asp:Series>
                     </Series>
                     <ChartAreas>
                         <asp:ChartArea Name="ChartArea1">
@@ -21,14 +22,29 @@
                             <AxisY Title="Number"></AxisY>
                         </asp:ChartArea>
                     </ChartAreas>
-                     <Legends>
-                <asp:Legend Title="Enrolees"></asp:Legend>
-            </Legends> 
+                 
                 </asp:Chart>
+                </div>
                 
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [town], [oldschool] FROM [dash] ORDER BY [town], [oldschool]"></asp:SqlDataSource>
+                      <div class="one-half last">
+                            <h1 style="color: black"> School Feeder</h1>
+                <asp:Chart ID="Chart2" runat="server">
+                    <Series>
+                        <asp:Series Name="Series1" ChartArea="ChartArea1"  ChartType="Bar" ></asp:Series>
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1">
+                            <AxisX Title="School"></AxisX>
+                            <AxisY Title="Number"></AxisY>
+                        </asp:ChartArea>
+                    </ChartAreas>
+                 
+                </asp:Chart>
+                          
 
+                      </div>
+             
                 <div class="clear"></div>
             </div>
             <!-- End Full Width -->
