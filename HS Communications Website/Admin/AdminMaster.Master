@@ -79,7 +79,7 @@
       <form id="form1" runat="server">
         <div id="menu" class="menu opacity">
             <ul>
-         <li><a href="portfolio.html">Dashboard</a></li>
+         <li><a href="AdminHomepage.aspx">Dashboard</a></li>
       <li><a>Uploading</a>
           <ul>
               <li><a href="Upload.aspx">Memo/Class Schedule</a></li>
@@ -94,7 +94,7 @@
       </li>
                  <li><a href="ManageGrades.aspx">Grades</a>
        </li>
-      <li><a href="blog.html">Manage Accounts</a>
+      <li><a href="ManageAccnt.aspx">Manage Accounts</a>
            <ul>
               <li><a href="AssignT.aspx">Assign Subject Teacher</a></li>
               <li><a href="AddTeachers.aspx">Assign Adviser to Section</a></li>
@@ -103,7 +103,7 @@
           </ul>
 
       </li>
-      <li><a>Change Password</a>
+      <li><a href="ChangePassword.aspx">Change Password</a>
        </li>
     
       <li> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>

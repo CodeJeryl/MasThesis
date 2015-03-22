@@ -72,14 +72,23 @@
     <Content Include="App_Data\HSdB_log.ldf">
       <DependentUpon>HSdB.mdf</DependentUpon>
     </Content>
+    <Content Include="Calendar.aspx" />
     <Content Include="CoreValues.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Faculty\AddGrades.aspx" />
+    <Content Include="Faculty\ChangePassword.aspx" />
     <Content Include="Faculty\Fhomepage.aspx" />
     <Content Include="Faculty\Grades.aspx" />
+    <Content Include="Faculty\Letters.aspx" />
     <Content Include="Faculty\Message.aspx" />
     <Content Include="History.aspx" />
+    <Content Include="images\bgbg\BG.jpg" />
+    <Content Include="images\bgbg\BG1.jpg" />
+    <Content Include="images\bgbg\BG2.jpg" />
     <Content Include="images\notavail.png" />
+    <Content Include="images\Slideshow\2.jpg" />
+    <Content Include="images\Slideshow\3.jpg" />
+    <Content Include="images\Slideshow\4.jpg" />
     <Content Include="images\testlogot.png" />
     <Content Include="InstitutionalStrategies.aspx" />
     <Content Include="js\carousel.js" />
@@ -99,6 +108,7 @@
     <Content Include="Philosophy.aspx" />
     <Content Include="Portal\ChangePassword.aspx" />
     <Content Include="Portal\GradesViewer.aspx" />
+    <Content Include="Portal\Letters.aspx" />
     <Content Include="Portal\Message.aspx" />
     <Content Include="Portal\Phomepage.aspx" />
     <Content Include="Portal\Profile.aspx" />
@@ -559,6 +569,13 @@
     <Compile Include="Admin\Upload.aspx.designer.cs">
       <DependentUpon>Upload.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CoreValues.aspx.cs">
       <DependentUpon>CoreValues.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -580,6 +597,13 @@
     <Compile Include="Faculty\AddGrades.aspx.designer.cs">
       <DependentUpon>AddGrades.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Faculty\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Faculty\FacuMaster.Master.cs">
       <DependentUpon>FacuMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -600,6 +624,13 @@
     </Compile>
     <Compile Include="Faculty\Grades.aspx.designer.cs">
       <DependentUpon>Grades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Letters.aspx.cs">
+      <DependentUpon>Letters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Letters.aspx.designer.cs">
+      <DependentUpon>Letters.aspx</DependentUpon>
     </Compile>
     <Compile Include="Faculty\Message.aspx.cs">
       <DependentUpon>Message.aspx</DependentUpon>
@@ -663,6 +694,13 @@
     </Compile>
     <Compile Include="Portal\GradesViewer.aspx.designer.cs">
       <DependentUpon>GradesViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Letters.aspx.cs">
+      <DependentUpon>Letters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Letters.aspx.designer.cs">
+      <DependentUpon>Letters.aspx</DependentUpon>
     </Compile>
     <Compile Include="Portal\Message.aspx.cs">
       <DependentUpon>Message.aspx</DependentUpon>

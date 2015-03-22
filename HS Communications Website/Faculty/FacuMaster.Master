@@ -91,8 +91,7 @@
      <li><a href="fullwidth.html">Change Password</a>
        </li>
     
-      <li><a href="contact.html">Contact Us</a></li>
-      <li> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>
+   <li> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>
     
     </ul>
             <br style="clear: left" />

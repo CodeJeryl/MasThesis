@@ -73,7 +73,7 @@ namespace HS_Communications_Website.Admin
 
                             SqlCommand cmd = new SqlCommand(strQuery, con);
 
-                            cmd.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
+                            cmd.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now.ToShortDateString();
                             cmd.Parameters.Add("@filename", SqlDbType.VarChar).Value = filename;
                             cmd.Parameters.Add("@ContentType", SqlDbType.VarChar).Value = contenttype;
                             cmd.Parameters.Add("@Data", SqlDbType.Binary).Value = bytes;

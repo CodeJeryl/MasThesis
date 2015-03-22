@@ -87,7 +87,7 @@
       </li>
       <li><a href="Profile.aspx">Profile</a>
       </li>
-                 <li><a href="GradesViewer.aspx">Grades</a>
+        <li><a href="GradesViewer.aspx">Grades</a>
       </li>
       <li><a href="Schedule.aspx">Schedule</a></li>
       <li><a href="ChangePassword.aspx">Change Password</a>

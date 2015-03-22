@@ -87,12 +87,18 @@
 </head>
 <body>
     <div id="thumbs">
-<a href="style/images/art/bg1.jpg">1</a>
+<%--<a href="style/images/art/bg1.jpg">1</a>
 <a href="style/images/art/bg2.jpg">2</a>
 <a href="style/images/art/bg3.jpg">3</a>
 <a href="style/images/art/bg4.jpg">4</a>
 <a href="style/images/art/bg5.jpg">5</a>
-<a href="style/images/art/bg6.jpg">6</a>
+<a href="style/images/art/bg6.jpg">6</a>--%>
+        <a href="images/bgbg/BG.jpg">1</a>
+          <a href="images/bgbg/BG1.jpg">2</a>
+          <a href="images/bgbg/BG2.jpg">3</a>
+        <a href="style/images/art/bg4.jpg">4</a>
+        <a href="style/images/art/bg6.jpg">5</a>
+   
 </div>
 <div id="superbgimage">
 	<div class="scanlines"></div>
@@ -118,7 +124,7 @@
   <!-- Begin Menu -->
   <div id="menu" class="menu opacity">
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="Default.aspx">Home</a></li>
       <li><a href="portfolio.html">The Colegio</a>
         <ul>
         	<li><a href="<%= Page.ResolveUrl("~/History.aspx") %>">History</a></li>
@@ -131,21 +137,8 @@
             <li><a href="<%= Page.ResolveUrl("~/Saints.aspx") %>">Saints</a></li>
         </ul>
       </li>
-      <li><a href="blog.html">School Calendar</a>
-        <ul>
-      	  <li><a href="post.html">Blog Post</a></li>
-        </ul>
-      </li>
-      <li><a href="fullwidth.html">Highschool</a>
-        <ul>
-      	  <li><a href="fullwidth.html">Full Width Page</a></li>
-      	  <li><a href="pagewithsidebar.html">Page with Sidebar</a></li>
-        </ul>
-      </li>
-    
-      <li><a href="contact.html">Contact Us</a></li>
-         <li><a href="ActivateAccount.aspx">Activate Account</a></li>
-    
+      <li><a href="Calendar.aspx">School Calendar</a></li>
+    <li><a href="ActivateAccount.aspx">Activate Account</a></li>
     </ul>
     <br style="clear: left" />
   </div>
