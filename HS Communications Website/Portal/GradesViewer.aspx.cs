@@ -19,6 +19,8 @@ namespace HS_Communications_Website.Portal
 
         protected void ListView1_ItemCreated(object sender, ListViewItemEventArgs e)
         {
+            try
+            {
 
             var constring =
                  System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
@@ -43,6 +45,13 @@ namespace HS_Communications_Website.Portal
                 lab3.Visible = Convert.ToBoolean(er.GetString(2));
                 lab4.Visible = Convert.ToBoolean(er.GetString(3));
 
+            }
+
+            }
+            catch (Exception ee)
+            {
+                ErrorPanel.Visible = true;
+                ErrorLabel.Text = ee.Message;
             }
         }
 

@@ -12,7 +12,6 @@ namespace HS_Communications_Website.Faculty
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             try
             {
                 if (Session["msgid"] == null)
@@ -21,7 +20,6 @@ namespace HS_Communications_Website.Faculty
                 }
                 else
                 {
-
                     var constring =
                        System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
                     string conss = constring.ConnectionString;
@@ -38,8 +36,8 @@ namespace HS_Communications_Website.Faculty
                         titleLbl.Text = er.GetString(1);
                         bodyLbl.Text = er.GetString(2).Replace(Environment.NewLine, "<br/>");
                         fromLbl.Text = er.GetString(3);
-
-                    }
+                        dateLbl.Text = er.GetDateTime(8).ToShortDateString();
+                        }
                     else
                     {
                         ErrorPanel.Visible = true;
@@ -51,7 +49,6 @@ namespace HS_Communications_Website.Faculty
             {
                 ErrorPanel.Visible = true;
                 ErrorLabel.Text = ee.Message;
-
             }
 
         }

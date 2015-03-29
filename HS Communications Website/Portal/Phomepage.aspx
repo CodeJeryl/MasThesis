@@ -9,9 +9,7 @@
               <%--  <div class="one-third">
                     <img src="../style/images/art/about.jpg" alt="" /></div>
                 <div class="two-third last">--%>
-                    <h2>Inbox
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                </h2>
+                    <h2>Announcement</h2>
                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
 

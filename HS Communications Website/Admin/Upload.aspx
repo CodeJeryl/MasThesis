@@ -103,7 +103,7 @@
                             </td>
                             <td>
                                 <asp:Button ID="dowBtn" runat="server" Text="Download" CssClass="buttonn" CommandName="down"  />
-                                <asp:Button ID="delBtn" runat="server" Text="Delete" CssClass="buttonn" CommandName="del" OnClientClick="javascript:return confirm('Delete Syllabus?');"/>
+                                <asp:Button ID="delBtn" runat="server" Text="Delete" CssClass="buttonn" CommandName="del" OnClientClick="javascript:return confirm('Are you sure you want to Delete?');"/>
                             </td>
                         </tr>
                     </ItemTemplate>

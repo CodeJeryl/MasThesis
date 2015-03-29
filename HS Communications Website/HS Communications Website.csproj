@@ -66,6 +66,7 @@
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\ManageAccnt.aspx" />
     <Content Include="Admin\ManageGrades.aspx" />
+    <Content Include="Admin\Message.aspx" />
     <Content Include="Admin\SendMessage.aspx" />
     <Content Include="Admin\Upload.aspx" />
     <Content Include="App_Data\HSdB.mdf" />
@@ -112,6 +113,7 @@
     <Content Include="Portal\Message.aspx" />
     <Content Include="Portal\Phomepage.aspx" />
     <Content Include="Portal\Profile.aspx" />
+    <Content Include="Portal\ReplyMessage.aspx" />
     <Content Include="Portal\Schedule.aspx" />
     <Content Include="Saints.aspx" />
     <Content Include="style\color\blue.css" />
@@ -555,6 +557,13 @@
     <Compile Include="Admin\ManageGrades.aspx.designer.cs">
       <DependentUpon>ManageGrades.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\SendMessage.aspx.cs">
       <DependentUpon>SendMessage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -729,6 +738,13 @@
     </Compile>
     <Compile Include="Portal\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\ReplyMessage.aspx.cs">
+      <DependentUpon>ReplyMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\ReplyMessage.aspx.designer.cs">
+      <DependentUpon>ReplyMessage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Portal\Schedule.aspx.cs">
       <DependentUpon>Schedule.aspx</DependentUpon>

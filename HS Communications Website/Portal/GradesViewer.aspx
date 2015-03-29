@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Portal/PortMaster.Master" AutoEventWireup="true" CodeBehind="GradesViewer.aspx.cs" Inherits="HS_Communications_Website.Portal.GradesViewer" %>
+﻿g<%@ Page Title="" Language="C#" MasterPageFile="~/Portal/PortMaster.Master" AutoEventWireup="true" CodeBehind="GradesViewer.aspx.cs" Inherits="HS_Communications_Website.Portal.GradesViewer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -7,6 +7,12 @@
            
                     <h2>    Grades Viewer</h2>
                 
+                <br/>
+                
+                SY: 2014 - 2015
+                     <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
+                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                <br />
                 
 
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [Subcode], [Units], [first], [second], [third], [fourth], [d1], [d2], [d3], [d4] FROM [SMTR] WHERE ([Studno] = @Studno)">
