@@ -108,6 +108,7 @@
     <Content Include="Objectives.aspx" />
     <Content Include="Philosophy.aspx" />
     <Content Include="Portal\ChangePassword.aspx" />
+    <Content Include="Portal\ContactUs.aspx" />
     <Content Include="Portal\GradesViewer.aspx" />
     <Content Include="Portal\Letters.aspx" />
     <Content Include="Portal\Message.aspx" />
@@ -696,6 +697,13 @@
     </Compile>
     <Compile Include="Portal\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Portal\GradesViewer.aspx.cs">
       <DependentUpon>GradesViewer.aspx</DependentUpon>
