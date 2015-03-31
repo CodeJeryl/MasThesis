@@ -36,7 +36,7 @@ namespace HS_Communications_Website.Admin
                 SqlCommand ins =
                     new SqlCommand(
                         "Insert into FacTbl values('" + empIDtxtbox.Text + "','" + passwordTxtbox.Text +
-                        "','" + DropDownList1.Text + "','" + nameTxtbox.Text + "','" + CheckBox1.Checked + "')", con);
+                        "','" + DropDownList1.Text + "','" + nameTxtbox.Text + "','" + CheckBox1.Checked + "','false','false','none')", con);
                 ins.ExecuteNonQuery();
 
                 con.Close();

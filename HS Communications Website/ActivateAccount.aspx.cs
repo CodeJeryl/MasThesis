@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -39,13 +41,16 @@ namespace HS_Communications_Website
 
             if(red.Read())
             {
-                password = "123";
+                Random x = new Random();
+                int y = x.Next();
+
+              // password = "123";
                 // send password to email and insert into useraccounts
                 con1.Close();
                 con1.Open();
                 string fulln = red.GetString(4) + " " + red.GetString(6);
                 string ParentName = "Mr./Mrs. " + red.GetString(6);
-                SqlCommand ins = new SqlCommand("Insert into useraccounts values('" + userTxtbox.Text + "','" + fulln + "','" + password + "','" + userTxtbox.Text + "'), ('" + userTxtbox.Text + "P" + "','" + ParentName + "','12345','" + userTxtbox.Text + "')", con1);
+                SqlCommand ins = new SqlCommand("Insert into useraccounts values('" + userTxtbox.Text + "','" + fulln + "','" + y.ToString() + "','" + userTxtbox.Text + "'), ('" + userTxtbox.Text + "P" + "','" + ParentName + "','12345','" + userTxtbox.Text + "')", con1);
                 ins.ExecuteNonQuery();
 
                 conP.Close();
@@ -58,10 +63,15 @@ namespace HS_Communications_Website
 
                 conPins.Close();
                 conPins.Open();
-                SqlCommand ins2 = new SqlCommand("Insert into pDetailsTbl values('" + userTxtbox.Text + "')", conPins);
+                SqlCommand ins2 = new SqlCommand("Insert into pDetailsTbl(studno) values('" + userTxtbox.Text + "')", conPins);
                 ins2.ExecuteNonQuery();
                 conPins.Close();
 
+                string mess = this.PopulateBody(fulln, y.ToString(),userTxtbox.Text);
+                // string mess = "Your Password: " + y.ToString() + "<br/> you can change your password after logging in.";
+
+                sendEmail("JerylSuarez@letranbataan.edu.ph", emailTxtbox.Text, "", "", "HighSchool Communication Account Activation", mess);
+              
                 Panel1.Visible = true;
              //   SucLbl.Text = "Student Account and Parent Account is Successfully Activated";
             }
@@ -72,6 +82,46 @@ namespace HS_Communications_Website
             }
 
         }
+
+        private string PopulateBody(string name, string password,string id)
+        {
+            string body = string.Empty;
+            using (StreamReader reader = new StreamReader(Server.MapPath("~/Mail/Send.html")))
+            {
+                body = reader.ReadToEnd();
+            }
+
+            body = body.Replace("{name}", name);
+            body = body.Replace("{password}", password);
+            body = body.Replace("{id}", id);
+            return body;
+        }
+
+        public static void sendEmail(string sender, string recepient, string bcc, string cc, string subject, string body)
+        {
+            MailMessage email = new MailMessage();
+            email.From = new MailAddress(sender);
+            email.To.Add(new MailAddress(recepient));
+            if (bcc != null && bcc != "") email.Bcc.Add(new MailAddress(bcc));
+            if (cc != null && bcc != "") email.CC.Add(new MailAddress(cc));
+
+            email.Subject = subject;
+            email.Body = body;
+            email.IsBodyHtml = true;
+            email.Priority = MailPriority.Normal;
+            SmtpClient client = new SmtpClient();
+            // client.EnableSsl = true;
+            client.Credentials = new System.Net.NetworkCredential(sender, "qwerqwer21");
+            client.Port = 25;
+            client.Host = "mail.letranbataan.com";
+            client.Send(email);
+
+            //client.Credentials = new System.Net.NetworkCredential(sender, "");
+            //client.Port = 587;
+            //client.Host = "smtp.gmail.com";
+            //client.Send(email);
+
+        } 
 
        }
 }

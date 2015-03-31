@@ -104,6 +104,7 @@
     <Content Include="js\jquery.superbgimage.min.js" />
     <Content Include="js\scripts.js" />
     <Content Include="js\transify.js" />
+    <Content Include="Mail\Send.html" />
     <Content Include="Mission.aspx" />
     <Content Include="Objectives.aspx" />
     <Content Include="Philosophy.aspx" />
