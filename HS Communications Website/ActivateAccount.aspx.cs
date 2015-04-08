@@ -49,8 +49,9 @@ namespace HS_Communications_Website
                 con1.Close();
                 con1.Open();
                 string fulln = red.GetString(4) + " " + red.GetString(6);
+                string lastn = red.GetString(6);
                 string ParentName = "Mr./Mrs. " + red.GetString(6);
-                SqlCommand ins = new SqlCommand("Insert into useraccounts values('" + userTxtbox.Text + "','" + fulln + "','" + y.ToString() + "','" + userTxtbox.Text + "'), ('" + userTxtbox.Text + "P" + "','" + ParentName + "','12345','" + userTxtbox.Text + "')", con1);
+                SqlCommand ins = new SqlCommand("Insert into useraccounts values('" + userTxtbox.Text + "','" + fulln + "','" + y.ToString() + "','" + userTxtbox.Text + "'), ('" + userTxtbox.Text + "P" + "','" + ParentName + "','" + lastn + "','" + userTxtbox.Text + "')", con1);
                 ins.ExecuteNonQuery();
 
                 conP.Close();
@@ -67,7 +68,7 @@ namespace HS_Communications_Website
                 ins2.ExecuteNonQuery();
                 conPins.Close();
 
-                string mess = this.PopulateBody(fulln, y.ToString(),userTxtbox.Text);
+                string mess = this.PopulateBody(fulln, y.ToString(), userTxtbox.Text, lastn);
                 // string mess = "Your Password: " + y.ToString() + "<br/> you can change your password after logging in.";
 
                 sendEmail("JerylSuarez@letranbataan.edu.ph", emailTxtbox.Text, "", "", "HighSchool Communication Account Activation", mess);
@@ -83,7 +84,7 @@ namespace HS_Communications_Website
 
         }
 
-        private string PopulateBody(string name, string password,string id)
+        private string PopulateBody(string name, string password,string id,string parentpass)
         {
             string body = string.Empty;
             using (StreamReader reader = new StreamReader(Server.MapPath("~/Mail/Send.html")))
@@ -94,6 +95,7 @@ namespace HS_Communications_Website
             body = body.Replace("{name}", name);
             body = body.Replace("{password}", password);
             body = body.Replace("{id}", id);
+            body = body.Replace("{parentpass}", parentpass);
             return body;
         }
 
