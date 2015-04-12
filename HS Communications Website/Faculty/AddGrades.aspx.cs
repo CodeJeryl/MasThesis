@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,15 +12,28 @@ namespace HS_Communications_Website.Faculty
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+                subLbl.Text = Session["subcode"].ToString();
+            secLbl.Text = Session["sectno"].ToString();
+            teachLbl.Text = Session["teachername"].ToString();
         }
 
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
+            updatebtn();
+            InsertEqui.Visible = true;
+            UpdateButton.Visible = false;
+       }
+
+        private void updatebtn()
+        {
             originalDataTable = (System.Data.DataTable)ViewState["originalValuesDataTable"];
 
             foreach (GridViewRow r in GridView1.Rows)
-                if (IsRowModified(r)) { GridView1.UpdateRow(r.RowIndex, false); }
+                if (IsRowModified(r))
+                {
+                    GridView1.UpdateRow(r.RowIndex, false);
+                }
 
             // Rebind the Grid to repopulate the original values table.
             tableCopied = false;
@@ -65,6 +79,122 @@ namespace HS_Communications_Website.Faculty
                     ViewState["originalValuesDataTable"] = originalDataTable;
                     tableCopied = true;
                 }
+
+
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                DataRow dr = ((DataRowView) e.Row.DataItem).Row;
+
+                int a;
+                bool isNumeric = int.TryParse(dr["first"].ToString(), out a);
+                if (isNumeric)
+                {
+                    if (a >= 90)
+                    {
+                        ((TextBox) e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(A)";
+                    }
+                    else if (a >= 85)
+                    {
+                        ((TextBox) e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(P)";
+                    }
+                    else if (a >= 80)
+                    {
+                        ((TextBox) e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(AP)";
+                    }
+                    else if (a >= 75)
+                    {
+                        ((TextBox) e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(D)";
+                    }
+                    else
+                    {
+                        ((TextBox) e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(B)";
+                    }
+                }
+
+                int b;
+                bool isNumeric2 = int.TryParse(dr["second"].ToString(), out b);
+                if (isNumeric2)
+                {
+                    if (b >= 90)
+                    {
+                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(A)";
+                    }
+                    else if (b >= 85)
+                    {
+                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(P)";
+                    }
+                    else if (b >= 80)
+                    {
+                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(AP)";
+                    }
+                    else if (b >= 75)
+                    {
+                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(D)";
+                    }
+                    else
+                    {
+                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(B)";
+                    }
+                }
+
+                int c;
+                bool isNumeric3 = int.TryParse(dr["third"].ToString(), out c);
+                if (isNumeric3)
+                {
+                    if (b >= 90)
+                    {
+                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(A)";
+                    }
+                    else if (b >= 85)
+                    {
+                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(P)";
+                    }
+                    else if (b >= 80)
+                    {
+                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(AP)";
+                    }
+                    else if (b >= 75)
+                    {
+                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(D)";
+                    }
+                    else
+                    {
+                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(B)";
+                    }
+                }
+
+                int d;
+                bool isNumeric4 = int.TryParse(dr["fourth"].ToString(), out d);
+                if (isNumeric4)
+                {
+                    if (b >= 90)
+                    {
+                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(A)";
+                    }
+                    else if (b >= 85)
+                    {
+                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(P)";
+                    }
+                    else if (b >= 80)
+                    {
+                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(AP)";
+                    }
+                    else if (b >= 75)
+                    {
+                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(D)";
+                    }
+                    else
+                    {
+                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(B)";
+                    }
+                }
+            }
+        }
+        protected void InsertEqui_Click(object sender, EventArgs e)
+        {
+            updatebtn();
+            UpdateButton.Visible = true;
+            InsertEqui.Visible = false;
         }
     }
 }
