@@ -40,6 +40,15 @@ namespace HS_Communications_Website.Portal {
         protected global::System.Web.UI.WebControls.Label ErrorLabel;
         
         /// <summary>
+        /// Panel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel2;
+        
+        /// <summary>
         /// lastnameTxtbox control.
         /// </summary>
         /// <remarks>
@@ -67,15 +76,6 @@ namespace HS_Communications_Website.Portal {
         protected global::System.Web.UI.WebControls.TextBox midnametxtbox;
         
         /// <summary>
-        /// addressTxtbox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addressTxtbox;
-        
-        /// <summary>
         /// lastattendTxtbox control.
         /// </summary>
         /// <remarks>
@@ -92,6 +92,42 @@ namespace HS_Communications_Website.Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox schoolAddTxtbox;
+        
+        /// <summary>
+        /// houseAddTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox houseAddTxtbox;
+        
+        /// <summary>
+        /// brgyAddTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox brgyAddTxtbox;
+        
+        /// <summary>
+        /// townAddTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox townAddTxtbox;
+        
+        /// <summary>
+        /// provinceAddTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox provinceAddTxtbox;
         
         /// <summary>
         /// dob control.
@@ -119,6 +155,15 @@ namespace HS_Communications_Website.Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        
+        /// <summary>
+        /// studPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel studPanel;
         
         /// <summary>
         /// mobileTxtbox control.
@@ -245,6 +290,51 @@ namespace HS_Communications_Website.Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox FaddressTxtbox;
+        
+        /// <summary>
+        /// GnameTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GnameTxtbox;
+        
+        /// <summary>
+        /// GtelnoTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GtelnoTxtbox;
+        
+        /// <summary>
+        /// GmobileTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GmobileTxtbox;
+        
+        /// <summary>
+        /// GoccuTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GoccuTxtbox;
+        
+        /// <summary>
+        /// GaddressTxtbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GaddressTxtbox;
         
         /// <summary>
         /// parentBtn control.
