@@ -156,8 +156,7 @@ namespace HS_Communications_Website.Portal
         {
             try
             {
-                //wala pa ung address na editable by parents
-                var constring =
+             var constring =
                    System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
                 string conss = constring.ConnectionString;
 

@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -56,6 +57,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Reporting, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ActivateAccount.aspx" />
@@ -67,6 +69,7 @@
     <Content Include="Admin\ManageAccnt.aspx" />
     <Content Include="Admin\ManageGrades.aspx" />
     <Content Include="Admin\Message.aspx" />
+    <Content Include="Admin\Profile.aspx" />
     <Content Include="Admin\SendMessage.aspx" />
     <Content Include="Admin\Upload.aspx" />
     <Content Include="App_Data\HSdB.mdf" />
@@ -565,6 +568,19 @@
     </Compile>
     <Compile Include="Admin\Message.aspx.designer.cs">
       <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Report1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\SendMessage.aspx.cs">
       <DependentUpon>SendMessage.aspx</DependentUpon>

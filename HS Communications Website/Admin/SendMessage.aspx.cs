@@ -55,7 +55,9 @@ namespace HS_Communications_Website.Admin
             }
             else if (DropDownList1.Text == "students")
             {
-            con.Close();
+                if(CheckBox1.Checked)
+                {
+                 con.Close();
                 con.Open();
 
                 //insert all parent/student
@@ -63,6 +65,19 @@ namespace HS_Communications_Website.Admin
                 ins.ExecuteNonQuery();
 
                 con.Close();
+                }
+                else
+                {
+                    con.Close();
+                    con.Open();
+
+                    //insert all parent/student
+                    SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','all','false','" + DateTime.Now.ToShortDateString() + "')", con);
+                    ins.ExecuteNonQuery();
+
+                    con.Close();
+                }
+
 
                 Panel1.Visible = true;
 
@@ -73,14 +88,30 @@ namespace HS_Communications_Website.Admin
             }
             else if (DropDownList1.Text == "parents")
             {
-                con.Close();
-                con.Open();
+                if (CheckBox1.Checked)
+                {
+                    con.Close();
+                    con.Open();
 
-                //insert all parent/student
-                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','" + DropDownList2.Text + "','false','" + DateTime.Now.ToShortDateString() + "')", con);
-                ins.ExecuteNonQuery();
+                    //insert all parent/student
+                    SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','" + DropDownList2.Text + "','false','" + DateTime.Now.ToShortDateString() + "')", con);
+                    ins.ExecuteNonQuery();
 
-                con.Close();
+                    con.Close();
+                }
+                else
+                {
+
+                    con.Close();
+                    con.Open();
+
+                    //insert all parent/student
+                    SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','all','false','" + DateTime.Now.ToShortDateString() + "')", con);
+                    ins.ExecuteNonQuery();
+
+                    con.Close();
+                    
+                }
 
                 Panel1.Visible = true;
 
@@ -123,27 +154,45 @@ namespace HS_Communications_Website.Admin
             {
                 DropDownList2.Visible = false;
                 seclbl.Visible = false;
+                CheckBox1.Visible = false;
+                CheckBox1.Checked = false;
             }
             else if(DropDownList1.Text == "students")
             {
-                DropDownList2.Visible = true;
-                seclbl.Visible = true;
+                CheckBox1.Visible = true;
             }
             else if(DropDownList1.Text == "parents")
             {
-                DropDownList2.Visible = true;
-                seclbl.Visible = true;
+                CheckBox1.Visible = true;
+                //DropDownList2.Visible = true;
+                //seclbl.Visible = true;
             }
             else if (DropDownList1.Text == "faculty")
             {
                 DropDownList2.Visible = false;
                 seclbl.Visible = false;
+                CheckBox1.Visible = false;
+                CheckBox1.Checked = false;
             }
             else
             {
-                DropDownList2.Visible = true;
-                seclbl.Visible = true;
+              CheckBox1.Checked = true;
             }
         }
+
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(CheckBox1.Checked)
+            {
+            DropDownList2.Visible = true;
+            seclbl.Visible = true;
+            }
+            else
+            {
+                DropDownList2.Visible = false;
+                seclbl.Visible = false;
+            }
+        }
+        
     }
 }

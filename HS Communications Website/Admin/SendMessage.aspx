@@ -14,12 +14,14 @@
            <h2>Send Message</h2>
      <asp:UpdatePanel ID="UpdatePanel1" runat="server">
          <ContentTemplate>
-           <p>Send to: <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+           <p>
+            Send to: <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                <asp:ListItem Value="all">ALL</asp:ListItem>
                <asp:ListItem Value="students">STUDENTS</asp:ListItem>
                <asp:ListItem Value="parents">PARENTS</asp:ListItem>
                <asp:ListItem Value="faculty">FACULTY</asp:ListItem>
-               </asp:DropDownList> &nbsp;&nbsp;&nbsp; <asp:Label ID="seclbl" runat="server" Text="Section: "></asp:Label> <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno"></asp:DropDownList>
+               </asp:DropDownList>  &nbsp;&nbsp;&nbsp;   <asp:CheckBox ID="CheckBox1" runat="server" Text="Send to specific section" OnCheckedChanged="CheckBox1_CheckedChanged" AutoPostBack="True" Visible="False" /> &nbsp;&nbsp;&nbsp; <asp:Label ID="seclbl" runat="server" Text="Section: "></asp:Label> <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno" Visible="False"></asp:DropDownList> 
+              
                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [Sectno] FROM [Section] ORDER BY [Sectno]"></asp:SqlDataSource>
                 </p> </ContentTemplate>
      </asp:UpdatePanel>
