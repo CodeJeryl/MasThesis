@@ -58,6 +58,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Telerik.Reporting, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ActivateAccount.aspx" />
@@ -69,6 +70,8 @@
     <Content Include="Admin\ManageAccnt.aspx" />
     <Content Include="Admin\ManageGrades.aspx" />
     <Content Include="Admin\Message.aspx" />
+    <Content Include="Admin\PrintClass.aspx" />
+    <Content Include="Admin\PrintStudent.aspx" />
     <Content Include="Admin\Profile.aspx" />
     <Content Include="Admin\SendMessage.aspx" />
     <Content Include="Admin\Upload.aspx" />
@@ -569,6 +572,20 @@
     <Compile Include="Admin\Message.aspx.designer.cs">
       <DependentUpon>Message.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\PrintClass.aspx.cs">
+      <DependentUpon>PrintClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PrintClass.aspx.designer.cs">
+      <DependentUpon>PrintClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PrintStudent.aspx.cs">
+      <DependentUpon>PrintStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PrintStudent.aspx.designer.cs">
+      <DependentUpon>PrintStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -581,6 +598,12 @@
     </Compile>
     <Compile Include="Admin\Report1.Designer.cs">
       <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Report2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\Report2.Designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\SendMessage.aspx.cs">
       <DependentUpon>SendMessage.aspx</DependentUpon>
@@ -878,7 +901,14 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Report2.resx">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
