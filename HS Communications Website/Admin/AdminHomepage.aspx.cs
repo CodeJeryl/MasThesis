@@ -22,10 +22,6 @@ namespace HS_Communications_Website.Admin
                 GetChartDataSc();
 
             }
-
-          
-
-
         }
 
         string conss =
@@ -34,17 +30,15 @@ namespace HS_Communications_Website.Admin
         private void GetChartData()
         {
            
-
-
             con = new SqlConnection(conss);
-          SqlCommand  cmd = new SqlCommand("Select * from CountTown", con);
+            SqlCommand cmd = new SqlCommand("Select townAdd,Count(*) as Number from Students where townadd is not NULL group by townAdd ", con);
             con.Open();
             Series series = Chart1.Series["Series1"];
             SqlDataReader red = cmd.ExecuteReader();
 
             while (red.Read())
             {
-                series.Points.AddXY(red["town"].ToString(), red["Number"]);
+                series.Points.AddXY(red["townAdd"].ToString(), red["Number"]);
 
             }
         }
@@ -56,14 +50,14 @@ namespace HS_Communications_Website.Admin
 
 
             con = new SqlConnection(conss);
-            SqlCommand cmd = new SqlCommand("Select * from CountOldSc", con);
+            SqlCommand cmd = new SqlCommand("Select scLastAttend,Count(*) as Number from Students where scLastAttend is not NULL group by scLastAttend ", con);
             con.Open();
             Series series = Chart2.Series["Series1"];
             SqlDataReader red = cmd.ExecuteReader();
 
             while (red.Read())
             {
-                series.Points.AddXY(red["oldschool"].ToString(), red["Number"]);
+                series.Points.AddXY(red["scLastAttend"].ToString(), red["Number"]);
 
             }
         }

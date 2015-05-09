@@ -81,6 +81,7 @@
       <li><a>Uploading</a>
           <ul>
               <li><a href="Upload.aspx">Memo/Class Schedule</a></li>
+                <li><a href="AddStudents.aspx">Upload New Students</a></li>
           </ul>
       </li>
                  
@@ -98,6 +99,7 @@
                  <li><a href="Profile.aspx">Edit Student Profile</a></li>
               <li><a href="AssignT.aspx">Assign Subject Teacher</a></li>
               <li><a href="AddTeachers.aspx">Assign Adviser to Section</a></li>
+               
                 <li><a href="AddTeachers.aspx">Add Teachers</a></li>
                 <li><a href="ManageAccnt.aspx">Enable/Disable Accounts</a></li>
           </ul>

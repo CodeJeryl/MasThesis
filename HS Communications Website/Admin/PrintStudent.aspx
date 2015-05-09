@@ -7,9 +7,9 @@
       <div id="container" class="opacity">
             <div class="full-width">
            
-                    <h2>Class list Generator</h2>
+                    <h2>Student Generator</h2>
                 
-                <telerik:ReportViewer ID="ReportViewer1" runat="server" Height="991px" ShowDocumentMapButton="False" ShowHistoryButtons="False" ShowNavigationGroup="False" ShowPrintPreviewButton="False" ShowRefreshButton="False" Width="680px"></telerik:ReportViewer>
+                <telerik:ReportViewer ID="ReportViewer1" runat="server" Height="991px" ShowDocumentMapButton="False" ShowHistoryButtons="False" ShowNavigationGroup="False" ShowPrintPreviewButton="False" ShowRefreshButton="False" Width="887px"></telerik:ReportViewer>
                 <div class="clear"></div>
             </div>
             <!-- End Full Width -->

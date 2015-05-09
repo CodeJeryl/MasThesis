@@ -63,6 +63,7 @@
   <ItemGroup>
     <Content Include="ActivateAccount.aspx" />
     <Content Include="Admin\AddGrades.aspx" />
+    <Content Include="Admin\AddStudents.aspx" />
     <Content Include="Admin\AddTeachers.aspx" />
     <Content Include="Admin\AdminHomepage.aspx" />
     <Content Include="Admin\AssignT.aspx" />
@@ -516,6 +517,13 @@
     <Compile Include="Admin\AddGrades.aspx.designer.cs">
       <DependentUpon>AddGrades.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddStudents.aspx.cs">
+      <DependentUpon>AddStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddStudents.aspx.designer.cs">
+      <DependentUpon>AddStudents.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AddTeachers.aspx.cs">
       <DependentUpon>AddTeachers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -908,6 +916,9 @@
     <EmbeddedResource Include="Admin\Report2.resx">
       <DependentUpon>Report2.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\AddedStudents\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
