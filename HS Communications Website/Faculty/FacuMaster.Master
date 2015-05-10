@@ -40,11 +40,11 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-       <div id="thumbs"> <a href="../images/bgbg/BG.jpg">1</a>
-          <a href="../images/bgbg/BG1.jpg">2</a>
+       <div id="thumbs"> <a href="../images/bgbg/BGtest.jpg">1</a>
+ <%--         <a href="../images/bgbg/BG1.jpg">2</a>
           <a href="../images/bgbg/BG2.jpg">3</a>
         <a href="../style/images/art/bg4.jpg">4</a>
-        <a href="../style/images/art/bg6.jpg">5</a>
+        <a href="../style/images/art/bg6.jpg">5</a>--%>
 </div>
 <div id="superbgimage">
 	<div class="scanlines"></div>
