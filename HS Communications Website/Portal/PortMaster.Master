@@ -83,7 +83,7 @@
       <li><a href="Phomepage.aspx">Announcement</a>
           <ul>
               <li><a href="Phomepage.aspx">Messages</a></li>
-              <li><a href="#">Letters</a></li>
+              <li><a href="Letters.aspx">Letters</a></li>
           </ul>
       </li>
       <li><a href="Profile.aspx">Profile</a>
