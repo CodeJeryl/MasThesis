@@ -82,7 +82,7 @@
                  
       <li><a>Messages</a>
           <ul>
-              <li><a href="#">Inbox</a></li>
+              <li><a href="Inbox.aspx">Inbox</a></li>
               <li><a href="SendMessage.aspx">Send Message</a></li>
           </ul>
 

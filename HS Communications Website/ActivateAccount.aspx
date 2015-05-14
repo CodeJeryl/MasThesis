@@ -11,7 +11,7 @@
                 
 
            <h2>Activate Account</h2>
-                    <p> Id Number/Username: <asp:TextBox ID="userTxtbox" runat="server"></asp:TextBox></p> <br />
+                    <p> Student ID: <asp:TextBox ID="userTxtbox" runat="server"></asp:TextBox></p> <br />
                   <p> Email Address: <asp:TextBox ID="emailTxtbox" runat="server"></asp:TextBox></p>
                   <br/>
                 <span style="margin: 80%"> <asp:Button ID="Button1" runat="server" Text="Activate Now" CssClass="buttonn" OnClick="Button1_Click"/></span>
