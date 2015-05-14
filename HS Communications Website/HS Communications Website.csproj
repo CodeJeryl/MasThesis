@@ -94,10 +94,14 @@
     <Content Include="images\bgbg\BG1.jpg" />
     <Content Include="images\bgbg\BG2.jpg" />
     <Content Include="images\bgbg\BGtest.jpg" />
+    <Content Include="images\eCommunication.png" />
+    <Content Include="images\nameonly.png" />
+    <Content Include="images\nameonly1.png" />
     <Content Include="images\notavail.png" />
     <Content Include="images\Slideshow\2.jpg" />
     <Content Include="images\Slideshow\3.jpg" />
     <Content Include="images\Slideshow\4.jpg" />
+    <Content Include="images\smol.png" />
     <Content Include="images\testlogot.png" />
     <Content Include="InstitutionalStrategies.aspx" />
     <Content Include="js\carousel.js" />

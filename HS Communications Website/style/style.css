@@ -187,7 +187,7 @@ blockquote {
 	border-top: 3px solid #454545;
 	height: 4px;
 	border-bottom: 1px solid #454545;
-	margin: 36px 0;
+	margin: 20px 0;
 }
 .hr1 {
 	height: 0;
@@ -573,7 +573,7 @@ ul.flickr li img {
 	margin-bottom: 25px;
 }
 .quote blockquote {
-	background: #FFF url(style/images/quote.png) no-repeat 15px 15px;
+	background: #FFF url(/style/images/quote.png) no-repeat 15px 15px;
 	padding: 15px 15px 15px 40px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -618,7 +618,7 @@ ul.flickr li img {
 	position: absolute;
 	top: 50%;
 	margin-top: -9px;
-	background: url('style/images/arrows.png');
+	background: url('/style/images/arrows.png');
 	width: 25px;
 	height: 25px;
 	cursor: pointer;
@@ -647,7 +647,7 @@ ul.flickr li img {
 	vertical-align: middle;
 }
 .showcase-plus-anchor {
-	background-image: url('style/images/plus.png');
+	background-image: url('/style/images/plus.png');
 	background-repeat: no-repeat;
 }
 .showcase-plus-anchor:hover {
@@ -658,7 +658,7 @@ div.showcase-tooltip {
 	color: #000;
 	text-align: left;
 	padding: 5px 8px;
-	background-image: url(style/images/white-opacity-80.png);
+	background-image: url(/style/images/white-opacity-80.png);
 }
 .showcase-caption {
 	color: #000;
@@ -669,7 +669,7 @@ div.showcase-tooltip {
 	left: 10px;
 	display: none;
 	width: auto;
-	background-image: url(style/images/white-opacity-80.png);
+	background-image: url(/style/images/white-opacity-80.png);
 }
 .showcase-onepage .showcase-content {
 	margin-bottom: 10px;
@@ -688,7 +688,7 @@ div.showcase-tooltip {
 	height: 12px;
 	text-indent: -99999px;
 	display: inline-block;
-	background: url('style/images/navs.png');
+	background: url('/style/images/navs.png');
 }
 .showcase-button-wrapper span:hover, .showcase-button-wrapper span.active {
 	background-position: 0 -12px;

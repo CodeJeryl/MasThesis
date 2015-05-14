@@ -40,31 +40,6 @@
         $('.forms').dcSlickForms();
     });
 </script>
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        $("#showcase").awShowcase(
-            {
-                content_width: 900,
-                content_height: 400,
-                auto: true,
-                interval: 3000,
-                continuous: false,
-                arrows: true,
-                buttons: true,
-                btn_numbers: true,
-                keybord_keys: true,
-                mousetrace: false, /* Trace x and y coordinates for the mouse */
-                pauseonover: true,
-                stoponclick: false,
-                transition: 'fade', /* hslide/vslide/fade */
-                transition_delay: 0,
-                transition_speed: 500,
-                show_caption: 'onload' /* onload/onhover/show */
-            });
-    });
-
-</script>
     
     <script>
         ; (function ($) {
@@ -106,7 +81,12 @@
 </div>
     <div id="wrapper">
     <div id="header">
-    <div class="logo opacity"><a href="Default.aspx"><img src="images/testlogot.png" width="50%"/></a></div>
+    <div class="logo opacity" ><a href="Default.aspx">
+       <img src="images/nameonly1.png" width="100%"/></a></div>
+        <div style="position: absolute; left: 54%;top: 40%; ">
+            <img src="images/eCommunication.png" width="300px" />
+            
+        </div>
     <div class="social">
          <a href="#" class="button blue" style="font-size: 20px;width: 80px; height: 20px;text-align: center" id="my-button">Login</a>
        
@@ -126,7 +106,7 @@
   <div id="menu" class="menu opacity">
     <ul>
       <li><a href="Default.aspx">Home</a></li>
-      <li><a href="portfolio.html">The Colegio</a>
+      <li><a>The Colegio</a>
         <ul>
         	<li><a href="<%= Page.ResolveUrl("~/History.aspx") %>">History</a></li>
       	  <li><a href="<%= Page.ResolveUrl("~/Philosophy.aspx") %>">Dominican Philosophy of Education</a></li>
