@@ -15,7 +15,7 @@ namespace HS_Communications_Website.Faculty
             if (!IsPostBack)
                 subLbl.Text = Session["subcode"].ToString();
             secLbl.Text = Session["sectno"].ToString();
-            teachLbl.Text = Session["teachername"].ToString();
+        //    teachLbl.Text = Session["teachername"].ToString();
         }
 
         protected void UpdateButton_Click(object sender, EventArgs e)

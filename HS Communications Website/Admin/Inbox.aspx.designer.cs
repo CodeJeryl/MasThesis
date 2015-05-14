@@ -10,7 +10,7 @@
 namespace HS_Communications_Website.Admin {
     
     
-    public partial class AdminHomepage {
+    public partial class Inbox {
         
         /// <summary>
         /// Panel1 control.
@@ -40,21 +40,21 @@ namespace HS_Communications_Website.Admin {
         protected global::System.Web.UI.WebControls.Label ErrorLabel;
         
         /// <summary>
-        /// Chart1 control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart Chart1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// Chart2 control.
+        /// ListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart Chart2;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
     }
 }

@@ -68,6 +68,7 @@
     <Content Include="Admin\AdminHomepage.aspx" />
     <Content Include="Admin\AssignT.aspx" />
     <Content Include="Admin\ChangePassword.aspx" />
+    <Content Include="Admin\Inbox.aspx" />
     <Content Include="Admin\ManageAccnt.aspx" />
     <Content Include="Admin\ManageGrades.aspx" />
     <Content Include="Admin\Message.aspx" />
@@ -563,6 +564,13 @@
     </Compile>
     <Compile Include="Admin\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManageAccnt.aspx.cs">
       <DependentUpon>ManageAccnt.aspx</DependentUpon>
